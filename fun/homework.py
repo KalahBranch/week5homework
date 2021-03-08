@@ -2,7 +2,7 @@
 
 
 def find_greatest_number(incoming_list):
-    return max(incoming_list) 
+    return max(incoming_list)
     pass
 
 
