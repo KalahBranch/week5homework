@@ -21,8 +21,17 @@ def add_list_numbers(incoming_list):
 
 
 def longest_value_key(incoming_dict):
-    """
-    Required parameter, incoming_dict, should be a dict.
-    Find the KEY that has a value with the highest length, use the len() function
-    """
+    maxKeyLength = 0
+    longestKey = "finalkey"
+    if incoming_dict is None:
+        return longestKey is None
+
+    if len(incoming_dict) == 0:
+        return longestKey is None
+
+    for key in incoming_dict:
+        if len(incoming_dict[key]) > maxKeyLength:
+            maxKeyLength = len(incoming_dict[key])
+            longestKey = key
+    return longestKey
     pass
