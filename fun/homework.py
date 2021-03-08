@@ -21,17 +21,15 @@ def add_list_numbers(incoming_list):
 
 
 def longest_value_key(incoming_dict):
-    maxKeyLength = 0
-    longestKey = "finalkey"
-    if incoming_dict is None:
-        return longestKey is None
+    try:
+        keyResult = None
+        maxValue = 0
+        for key in incoming_dict:
+            if len(incoming_dict[key]) > maxValue:
+                maxValue = len(incoming_dict[key])
+                keyResult = key
+    except:
+        incoming_dict = None
 
-    if len(incoming_dict) == 0:
-        return longestKey is None
-
-    for key in incoming_dict:
-        if len(incoming_dict[key]) > maxKeyLength:
-            maxKeyLength = len(incoming_dict[key])
-            longestKey = key
-    return longestKey
+    return keyResult
     pass
